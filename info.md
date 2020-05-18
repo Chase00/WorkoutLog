@@ -1,0 +1,54 @@
+# Building out a node/express server
+## First steps
+- create folder
+- npm init in folder
+  - create package.json
+## npm setup
+- npm install packages
+  - express
+    - server
+  - nodemon
+    - restarts server on changes
+    - install as dev dependency with --save-dev argument
+  - dotenv
+    - configures .env variables
+  - bcryptjs (import as 'bcrypt')
+    - password hashing
+  - sequelize
+    - ORM; connects with SQL (Postgres)
+  - pg
+    - required for Postgres
+  - jsonwebtoken
+    - tokens
+- package.json is updated with dependencies
+- node_modules folder created
+## JavaScript setup
+- create index.js file
+  - require and configure dotenv
+    - create .env file with port number, Postgres password, etc.
+  - create .gitignore file
+    - *.env
+    - node_modules/
+  - require express
+  - create an app
+  - app.use(express.json());
+  - create a database connection
+  - set up models
+    - users model
+    - application model
+  - middleware
+    - headers
+    - validate session
+    - use middleware in index.js
+  - controllers
+    - users controller
+      - build endpoints
+        - POST for signup
+        - POST for login
+    - application controller
+      - build endpoints
+        - GET all
+        - GET one
+        - POST
+        - PUT
+        - DELETE
